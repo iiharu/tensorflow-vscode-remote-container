@@ -1,5 +1,4 @@
 
-FROM nvidia/cuda
 FROM tensorflow/tensorflow:2.0.0-gpu-py3-jupyter
 
 # Avoid warnings by switching to noninteractive
@@ -21,7 +20,7 @@ RUN apt-get update \
  && apt-get -y install git procps lsb-release \
  #
  # Install python tools
- && pip --disable-pip-version-check --no-cache-dir install autopep8 jupyter mypy pylint \
+ && pip --disable-pip-version-check --no-cache-dir install autopep8 mypy pylint \
  #
  # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
  && groupadd --gid $USER_GID $USERNAME \
