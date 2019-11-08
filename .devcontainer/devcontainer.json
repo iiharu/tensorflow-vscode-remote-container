@@ -1,5 +1,5 @@
 {
-  "name": "Nvidia",
+  "name": "TensorFlowGPU",
   "dockerFile": "Dockerfile",
   "runArgs": [
     "--gpus", "all",
